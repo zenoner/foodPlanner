@@ -6,6 +6,7 @@ class FoodsController < ApplicationController
   end
 
   def categories
+    @categories = Categorie.all
   end
 
   def recipes
