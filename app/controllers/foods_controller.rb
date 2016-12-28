@@ -1,12 +1,13 @@
 class FoodsController < ApplicationController
   def home
+
   end
 
   def introduction
   end
 
   def categories
-    @categories = Categorie.all
+    @lists = List.all
   end
 
   def recipes

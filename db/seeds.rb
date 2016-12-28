@@ -6,10 +6,18 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-# Categorie.create(date: 'Dec 23',
-#   food: 'Duberton Natural Pork',
-#   categorie: 'Meat',
-#   grocery: 'Nijiya Market',
-#   price: '5.93',
-#   twoserviceprice: '2.965',
-#   note: 'none' )
+List.create(date: '12/23/2016',
+  food: 'Duberton Natural Pork',
+  category: 'Meat',
+  grocery: 'Nijiya Market',
+  price: '5.93',
+  twoserviceprice: '2.965',
+  note: 'none')
+
+List.create(date: '12/28/2016',
+  food: 'Hi Chew Sour Citrus',
+  category: 'Candy',
+  grocery: 'Nijiya Market',
+  price: '1.79',
+  twoserviceprice: '0.900',
+  note: 'Cheaper than Safeway shop')

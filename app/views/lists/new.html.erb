@@ -1,0 +1,30 @@
+<h1>This is a form for lists data</h1>
+
+<%= form_for @list do |f| %>
+<p>
+  <%= f.label :date %>
+  <%= f.text_field :date %>
+</p>
+<p>
+  <%= f.label :food %>
+  <%= f.text_field :food %>
+</p><p>
+  <%= f.label :category %>
+  <%= f.text_field :category %>
+</p><p>
+  <%= f.label :grocery %>
+  <%= f.text_field :grocery %>
+</p><p>
+  <%= f.label :price %>
+  <%= f.text_field :price %>
+</p><p>
+  <%= f.label :twoserviceprice %>
+  <%= f.text_field :twoserviceprice %>
+</p><p>
+  <%= f.label :note %>
+  <%= f.text_field :note %>
+</p>
+<p>
+  <%= f.submit %>
+</p>
+<% end %>

@@ -1,4 +1,14 @@
 <h1>categories page</h1>
 
 <br>
-<%= @categorie.food %>
+<% @lists.each do |list| %>
+  <%= list.date %>
+  <%= list.food %>
+  <%= list.category %>
+  <%= list.grocery %>
+  <%= list.price %>
+  <%= list.twoserviceprice %>
+  <%= list.note %><br><br>
+<% end %>
+
+<%= link_to 'Home', root_path %>

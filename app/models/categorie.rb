@@ -1,3 +1,3 @@
-class Categorie < ApplicationRecord
-  has_many :categories
+class Categorie < ActiveRecord::Base
+
 end

@@ -10,15 +10,28 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161223213521) do
+ActiveRecord::Schema.define(version: 20161228180649) do
 
   create_table "categories", force: :cascade do |t|
     t.date     "Date"
     t.string   "Food"
     t.string   "categorie"
+    t.string   "grocery"
     t.float    "price"
-    t.float    "2_service_price"
+    t.float    "twoserviceprice"
     t.text     "note"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
+  end
+
+  create_table "lists", force: :cascade do |t|
+    t.string   "date"
+    t.string   "food"
+    t.string   "category"
+    t.string   "grocery"
+    t.string   "price"
+    t.string   "twoserviceprice"
+    t.string   "note"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
   end
