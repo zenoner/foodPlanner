@@ -6,8 +6,12 @@ class ListsController < ApplicationController
 
   def create
     @list = List.new(list_params)
-    @list.save
-    redirect_to (root_path) #root_path goes to the homepage
+    if @list.save
+      flash[:notice] = "List was successful created"
+      redirect_to (categories_path) #categories_path goes to the categories path
+    else
+      render 'new'
+    end
   end
 
   private

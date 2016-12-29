@@ -1,14 +1,34 @@
 <h1>categories page</h1>
 
-<br>
-<% @lists.each do |list| %>
-  <%= list.date %>
-  <%= list.food %>
-  <%= list.category %>
-  <%= list.grocery %>
-  <%= list.price %>
-  <%= list.twoserviceprice %>
-  <%= list.note %><br><br>
-<% end %>
+<%= link_to 'Add new List', new_list_path %>
+<br/>
+<br/>
+
 
 <%= link_to 'Home', root_path %>
+
+<table>
+  <tr>
+    <th>Date</th>
+    <th>Food</th>
+    <th>Category</th>
+    <th>Grocery</th>
+    <th>Price</th>
+    <th>Two service</th>
+    <th>Note</th>
+    <th>Link</th>
+  </tr>
+  <% @lists.each do |list| %>
+  <tr>
+      <td><%= list.date %></td>
+      <td><%= list.food %></td>
+      <td><%= list.category %></td>
+      <td><%= list.grocery %></td>
+      <td><%= list.price %></td>
+      <td><%= list.twoserviceprice %></td>
+      <td><%= list.note %></td>
+      <td><%= link_to "EDIT", edit_list_path(list) %></td>
+      <td><%= link_to "SHOW", list_path(list) %></td>
+  <% end %>
+  </tr>
+</table>
